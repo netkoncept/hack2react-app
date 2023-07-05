@@ -1,0 +1,20 @@
+<GridLayout rows="auto,*" class="page-bg">
+   <app-action-bar row="0" [title]="menuItem.name"></app-action-bar>
+
+   <GridLayout row="1" rows="*" class="list">
+      <ScrollView row="0">
+         <StackLayout class="list__collectionview" *ngIf="isResults">
+               <StackLayout orientation="vertical" class="list-item" (tap)="goToPage(item.id)" *ngFor="let item of notifications">
+                  <GridLayout rows="auto,*,auto,auto" class="list-item__box shadow-box">
+                     <Label row="0" text="{{item.title}}" textWrap="true" class="list-item__title"></Label>
+                     <Label row="1" text="{{item.description}}" textWrap="true" class="list-item__desc"></Label>
+                     <Label row="2" text="Obowiązuje od: {{item.valid_from | date: 'dd-MM-yyy'}}" textWrap="true"
+                            class="list-item__date"></Label>
+                     <Label row="3" text="Obowiązuje do: {{item.valid_to | date: 'dd-MM-yyy'}}" textWrap="true"
+                            class="list-item__date last"></Label>
+                  </GridLayout>
+               </StackLayout>
+         </StackLayout>
+      </ScrollView>
+   </GridLayout>
+</GridLayout>

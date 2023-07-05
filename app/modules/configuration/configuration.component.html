@@ -1,0 +1,24 @@
+<GridLayout rows="auto,*" class="page-bg">
+   <app-action-bar row="0" [title]="menuItem.name"></app-action-bar>
+
+   <ScrollView row="1" orientation="vertical" height="auto">
+      <StackLayout>
+         <StackLayout class="settings__container">
+            <StackLayout class="settings__box settings__box--big shadow-box">
+               <GridLayout columns="*,50" rows="auto" class="settings__item">
+                  <Switch row="0" col="1" checked="true" class="settings__switch"></Switch>
+                  <Label row="0" col="0" class="settings__subtitle" text="Mieszkaniec" textWrap="true"></Label>
+               </GridLayout>
+               <GridLayout columns="*,50" rows="auto" class="settings__item">
+                  <Switch row="0" col="1" class="settings__switch"></Switch>
+                  <Label row="0" col="0" class="settings__subtitle" text="Turysta" textWrap="true"></Label>
+               </GridLayout>
+               <GridLayout columns="*,50" rows="auto" class="settings__item">
+                  <Switch row="0" col="1" checked="true" class="settings__switch"></Switch>
+                  <Label row="0" col="0" class="settings__subtitle" text="Pozwolenie na wymuszenie lokalizacji" textWrap="true"></Label>
+               </GridLayout>
+            </StackLayout>
+         </StackLayout>
+      </StackLayout>
+   </ScrollView>
+</GridLayout>>

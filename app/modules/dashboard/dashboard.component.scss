@@ -1,0 +1,82 @@
+@import "../../assets/scss/variables";
+
+.dashboard {
+  padding-top: 15;
+
+  &__content {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15;
+
+  }
+
+  &__item {
+    width: 50%;
+    padding: 0 15;
+    margin-bottom: 30;
+    border-radius: $border-radius;
+    .content {
+      background: rgba($colorPrimary, $opacity);
+      min-height: 125;
+      color: #fff;
+      padding: 10 8;
+      text-align: left;
+      border-radius: $border-radius;
+    }
+  }
+}
+
+.page-header {
+  padding: 30 10%;
+  min-height: 106;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 22%, rgba(255, 255, 255, 0.95) 34%, rgba(255, 255, 255, 0.8) 58%, rgba(255, 255, 255, 0.5) 81%, rgba(255,255, 255, 0) 100%);
+  Image {
+    height: 80;
+    width: auto;
+  }
+
+  &__name {
+    margin-left: 15;
+    font-size: 18;
+    line-height: 1.5;
+    color: $text-color;
+    font-family: $fontFamily;
+    font-weight: $font-weight-heading;
+  }
+}
+
+.ns-tablet .dashboard {
+  &__content {
+    width: 500;
+  }
+}
+
+.ns-dark {
+  .dashboard {
+    &__item {
+      .content {
+        background: rgba($colorPrimary, $opacity);
+        color: #fff;
+      }
+    }
+  }
+}
+
+.ns-ios{
+  .dashboard {
+    width: 100%;
+    &__item {
+      width: 49.99%; //Fix to iOS 13.6 iPhone 11 Pro
+    }
+  }
+
+  .ns-320{
+    .dashboard {
+      &__item {
+        font-size: 13;
+      }
+    }
+  }
+
+}

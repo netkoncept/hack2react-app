@@ -1,0 +1,17 @@
+<StackLayout orientation="vertical" class="action-bar" paddingTop="{{actionBarPaddingTop}}">
+    <GridLayout rows="auto" columns="*, auto" width="100%" height="auto" >
+        <StackLayout col="0" orientation="vertical" class="action-bar__left">
+            <FlexboxLayout flexDirection="row" justifyContent="flex-start" alignItems="center" height="40">
+                <StackLayout accessible="true" accessibilityLabel="Pokaż menu" accessibilityRole="button" accessibilityTraits="button"
+                             orientation="vertical"
+                             class="action-bar__nav"
+                             (tap)="showMenu()"
+                >
+                    <SVGImage src="{{iconService.getBaseIcon('menu', '#fff')}}" height="24" width="24"></SVGImage>
+                </StackLayout>
+
+                <Label flexGrow="1" text="{{title}}" textWrap="false" class="action-bar__title"></Label>
+            </FlexboxLayout>
+        </StackLayout>
+    </GridLayout>
+</StackLayout>

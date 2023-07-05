@@ -1,0 +1,17 @@
+// Import common styles
+@import 'app-common';
+
+// Place any CSS rules you want to apply only on iOS here
+TextField, TextView {
+  font-size: 14;
+  border-bottom-color: #3d3d3d;
+  placeholder-color: #303030;
+  border-bottom-width: 1;
+  padding-left: 0;
+  min-height: 30;
+}
+Switch {
+  color: #fff;
+  background-color: #49b920;
+  off-background-color: #d1d1d1;
+}

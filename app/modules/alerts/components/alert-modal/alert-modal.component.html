@@ -1,0 +1,16 @@
+<StackLayout orientation="vertical" class="modal" top="10" left="0" width="100%" [visibility]="(alertService.showModalSubject$ | async) ? 'visible' : 'collapsed'" #alertModal>
+    <GridLayout columns="*,40" width="100%" class="modal__header" #modalHeader>
+        <Label col="0" [text]="alertData?.title" class="modal__title" textWrap="true" verticalAlignment="middle"></Label>
+        <StackLayout col="1" accessible="true" accessibilityLabel="Zamknij" accessibilityRole="button" accessibilityTraits="button"
+                     width="40" height="40" orientation="vertical" verticalAlignment="middle" (tap)="closeModal()">
+            <SVGImage class="modal__close-icon" src="{{iconService.getBaseIcon('close', '#fff')}}" height="20" width="20"></SVGImage>
+        </StackLayout>
+    </GridLayout>
+    <StackLayout orientation="horizontal" class="modal__content">
+        <ScrollView class="modal__scroll" height="{{modalScrollHeight}}">
+            <StackLayout orientation="horizontal" padding="15 10 15 15" #modalContent>
+                <Label [text]="alertData?.description" textWrap="true"></Label>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</StackLayout>

@@ -1,0 +1,88 @@
+@import "app/assets/scss/variables";
+
+@mixin item-box($shadow) {
+  border-radius: $border-radius;
+  background-color: #fff;
+  box-shadow: $shadow;
+  border-width: 1;
+  border-color: #f8f8f8;
+}
+
+@mixin item-box-dark {
+  border-radius: $border-radius;
+  background-color: #1b1b1b;
+}
+
+
+* {
+  font-family: $fontFamily;
+  font-weight: $font-weight-normal;
+}
+
+Page {
+  color: $colorSecondary;
+  font-size: 14;
+  font-family: $fontFamily;
+}
+
+.btn {
+  padding: 7 20;
+  border-width: 1;
+  border-radius: 50;
+  margin: 3;
+  font-size: 14;
+  width: auto;
+}
+
+.btn-primary {
+  background-color: $colorPrimary;
+  border-color: darken($colorPrimary, 3%);;
+  color: #fff;
+
+  &:active {
+    background-color: darken($colorPrimary, 10%);
+    border-color: darken($colorPrimary, 15%);
+  }
+
+  &.disabled {
+    background-color: lighten($colorPrimary, 15%);
+    border-color: lighten($colorPrimary, 15%);
+    color: darken(#fff, 15%);
+  }
+}
+
+.btn-secondary {
+  background-color: $colorSecondary;
+  border-color: darken($colorSecondary, 3%);;
+  color: #fff;
+
+  &:active {
+    background-color: darken($colorSecondary, 10%);
+    border-color: darken($colorSecondary, 15%);
+  }
+
+  &.disabled {
+    background-color: lighten($colorSecondary, 15%);
+    border-color: lighten($colorSecondary, 15%);
+    color: darken(#fff, 15%);
+  }
+}
+
+.ns-android {
+  .shadow-box {
+    @include item-box($boxShadowAndroid);
+  }
+}
+
+.ns-ios {
+  .shadow-box {
+    @include item-box($boxShadowIos);
+  }
+}
+
+.ns-dark {
+  .shadow-box {
+    @include item-box-dark;
+  }
+}
+

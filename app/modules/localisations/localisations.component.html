@@ -1,0 +1,65 @@
+<GridLayout rows="auto,*" class="settings page-bg">
+   <app-action-bar row="0" [title]="menuItem.name"></app-action-bar>
+
+   <ScrollView row="1" orientation="vertical" height="auto">
+      <StackLayout class="localisations">
+         <StackLayout class="localisations__header">
+            <Button text="Dodaj lokalizację" class="btn btn-primary" ></Button>
+         </StackLayout>
+         <StackLayout class="localisations__box shadow-box notifications-list">
+            <Label text="Lista lokalizacji" class="localisations__title" textWrap="true"></Label>
+
+            <GridLayout columns="*,auto" class="notifications-list__item">
+               <StackLayout col="0" paddingRight="10">
+                  <Label text="ul. Czerniakowska 52, Warszawa" class="notifications-list__title" textWrap="true"></Label>
+               </StackLayout>
+
+               <GridLayout col="1" rows="*,*">
+                  <StackLayout row="0">
+                     <FlexboxLayout alignItems="stretch" verticalAlignment="middle" col="1"  class="btn-action" marginBottom="10">
+                        <StackLayout flexGrow="1" height="40" width="40" verticalAlignment="middle" class="btn-primary" accessible="true" accessibilityRole="button" accessibilityTraits="button"
+                                     orientation="vertical">
+                           <Label text="X" class="btn-action__text"></Label>
+                        </StackLayout>
+                     </FlexboxLayout>
+                  </StackLayout>
+               </GridLayout>
+            </GridLayout>
+
+            <GridLayout columns="*,auto" class="notifications-list__item">
+               <StackLayout col="0" paddingRight="10">
+                  <Label text="ul. Podchorążych 38, Warszawa" class="notifications-list__title" textWrap="true"></Label>
+               </StackLayout>
+
+               <GridLayout col="1" rows="*,*">
+                  <StackLayout row="0">
+                     <FlexboxLayout alignItems="stretch" verticalAlignment="middle" col="1"  class="btn-action" marginBottom="10">
+                        <StackLayout flexGrow="1" height="40" width="40" verticalAlignment="middle" class="btn-primary" accessible="true" accessibilityRole="button" accessibilityTraits="button"
+                                     orientation="vertical">
+                           <Label text="X" class="btn-action__text"></Label>
+                        </StackLayout>
+                     </FlexboxLayout>
+                  </StackLayout>
+               </GridLayout>
+            </GridLayout>
+
+            <GridLayout columns="*,auto" class="notifications-list__item">
+               <StackLayout col="0" paddingRight="10">
+                  <Label text="ul. Stefana Żeromskiego 207, Otwock" class="notifications-list__title" textWrap="true"></Label>
+               </StackLayout>
+
+               <GridLayout col="1" rows="*,*">
+                  <StackLayout row="0">
+                     <FlexboxLayout alignItems="stretch" verticalAlignment="middle" col="1"  class="btn-action" marginBottom="10">
+                        <StackLayout flexGrow="1" height="40" width="40" verticalAlignment="middle" class="btn-primary" accessible="true" accessibilityRole="button" accessibilityTraits="button"
+                                     orientation="vertical">
+                           <Label text="X" class="btn-action__text"></Label>
+                        </StackLayout>
+                     </FlexboxLayout>
+                  </StackLayout>
+               </GridLayout>
+            </GridLayout>
+         </StackLayout>
+      </StackLayout>
+   </ScrollView>
+</GridLayout>>

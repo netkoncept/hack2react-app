@@ -1,0 +1,22 @@
+<GridLayout rows="auto,*" class="page-bg">
+   <app-action-bar row="0" [title]="menuItem.name"></app-action-bar>
+
+   <StackLayout row="1" orientation="vertical" class="map">
+      <StackLayout orientation="vertical">
+         <AbsoluteLayout #mapAbsoluteLayout width="100%" height="100%">
+            <StackLayout width="100%" height="100%" orientation="vertical" class="map__container" top="0" left="0">
+               <ContentView width="100%" height="100%" #mapContainer></ContentView>
+            </StackLayout>
+
+            <GridLayout columns="*,auto" top="0" left="0" width="100%">
+               <FlexboxLayout col="1" accessible="true" [accessibilityLabel]="'Twoja lokalizacja'" accessibilityRole="button" accessibilityTraits="button"
+                              class="btn-location" (tap)="getLocalization(true)" justifyContent="center" alignItems="center">
+                  <SVGImage src="{{iconService.getBaseIcon('localize', helperService.modeIconColor)}}" height="20" width="20"></SVGImage>
+               </FlexboxLayout>
+            </GridLayout>
+
+            <app-alert-modal [alertData]="alertData" *ngIf="(alertsService.showModalSubject$ | async) && modalType === 'alert'"></app-alert-modal>
+         </AbsoluteLayout>
+      </StackLayout>
+   </StackLayout>
+</GridLayout>

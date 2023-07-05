@@ -1,0 +1,22 @@
+@import "../../assets/scss/variables";
+
+.alerts {
+  &__wrapper {
+    padding: 15;
+  }
+}
+
+.map {
+  &__container {
+    position: relative;
+  }
+}
+
+.btn-location {
+  margin-top: 10;
+  margin-right: 10;
+  width: 40;
+  height: 40;
+  background-color: #fff;
+  border-radius: $border-radius;
+}

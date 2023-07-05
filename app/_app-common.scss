@@ -1,0 +1,14 @@
+//App mixins and variables
+@import 'assets/scss/variables';
+
+//App global styles
+@import 'assets/scss/base';
+@import 'assets/scss/main-menu';
+
+.ns-dark {
+  body {
+    background-color: #000;
+    color: #fff;
+  }
+}
+

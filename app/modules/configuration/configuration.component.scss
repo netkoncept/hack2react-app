@@ -1,0 +1,41 @@
+@import "../../assets/scss/variables";
+
+.settings {
+  &__container {
+    padding: 15;
+  }
+
+  &__item {
+    margin-bottom: 10;
+  }
+
+  &__box {
+    &--big {
+      padding: 15;
+    }
+    &--small {
+      background-color: #EEEEEE;
+      margin-top: 15;
+      padding: 15;
+      border-radius: 15;
+    }
+  }
+
+  &__title {
+    font-size: 20;
+    font-weight: 400;
+    color: #000;
+    line-height: 6;
+    margin-bottom: 20;
+  }
+
+  &__subtitle {
+    font-size: 16;
+    font-weight: 400;
+    color: #000;
+  }
+
+  &__list {
+    margin-bottom: 5;
+  }
+}

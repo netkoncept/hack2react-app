@@ -1,0 +1,13 @@
+{
+  "appId": "pl.com.otwock",
+  "appUrl": "https://hack2react.azure.netk.pl",
+  "buildProfile": "otwock",
+  "senderId": "",
+  "apiKey": "",
+  "title": "Otwock Alert Online",
+  "appIcon": "logo.png",
+  "appIconIos": "logo_ios.png",
+  "appIconSvg": "logo.svg",
+  "splashBg": "",
+  "mapbox_api_key": ""
+}

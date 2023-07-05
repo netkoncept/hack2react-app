@@ -1,0 +1,31 @@
+<StackLayout orientation="vertical">
+   <GridLayout class="dashboard">
+      <Image stretch="aspectFill" iosOverflowSafeArea="true" src="~/images/bg.jpg"></Image>
+      <ScrollView orientation="vertical">
+         <StackLayout orientation="vertical">
+            <GridLayout class="page-header">
+               <GridLayout columns="auto,auto" horizontalAlignment="center">
+                  <StackLayout col="0" verticalAlignment="center">
+                     <Image src="~/images/logo.png"></Image>
+                  </StackLayout>
+                  <StackLayout col="1" verticalAlignment="center">
+                     <label text="Otwock Alert Online" class="page-header__name" textWrap="true"></label>
+                  </StackLayout>
+               </GridLayout>
+            </GridLayout>
+
+            <FlexboxLayout flexDirection="row" flexWrap="wrap" justifyContent="center" alignItems="stretch"
+                           class="dashboard__content">
+               <StackLayout *ngFor="let menu of menuData" class="dashboard__item"
+                            (tap)="goToPage(menu)">
+                  <GridLayout rows="60,*" class="content" accessible="true" accessibilityLabel="{{menu.name}}" accessibilityRole="button" accessibilityTraits="button">
+                     <SVGImage row="0" horizontalAlignment="left" src="{{iconService.getBaseIcon(menu.icon,'#fff')}}" height="40"
+                               width="40" class="content__img"></SVGImage>
+                     <Label row="1" horizontalAlignment="left" verticalAlignment="center" textWrap="true" text="{{menu.name}}"></Label>
+                  </GridLayout>
+               </StackLayout>
+            </FlexboxLayout>
+         </StackLayout>
+      </ScrollView>
+   </GridLayout>
+</StackLayout>

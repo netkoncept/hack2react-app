@@ -1,0 +1,29 @@
+@import "../../../assets/scss/variables";
+
+.action-bar {
+  background-color: $colorPrimary;
+  color: #fff;
+  padding: 10 10 10 10;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.26);
+  z-index: 100;
+
+  &__nav {
+    padding: 5;
+    flex: 0 0 35;
+  }
+
+  &__title {
+    display: inline-block;
+    overflow: hidden;
+    font-size: 18;
+    font-weight: $font-weight-normal;
+    padding-left: 5;
+  }
+}
+
+.ns-dark {
+  &.action-bar {
+    background-color: $dark-grey;
+    color: #fff;
+  }
+}

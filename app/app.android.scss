@@ -1,0 +1,10 @@
+// Place any CSS rules you want to apply only on Android here
+@import 'app-common';
+Switch {
+  color: #0074af;
+  background-color: #00a9ff;
+  off-background-color: black;
+}
+.fs-inherit{
+  font-size: inherit;
+}

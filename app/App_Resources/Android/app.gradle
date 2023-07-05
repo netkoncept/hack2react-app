@@ -1,0 +1,36 @@
+// Add your native dependencies here:
+
+// Uncomment to add recyclerview-v7 dependency
+//dependencies {
+//	compile 'com.android.support:recyclerview-v7:+'
+//}
+
+android {
+  defaultConfig {
+    compileSdkVersion 32
+    minSdkVersion 24
+    targetSdkVersion 32
+    generatedDensities = []
+    applicationId = "pl.com.otwock"
+    multiDexEnabled true
+
+    //override supported platforms
+    // ndk {
+    //       abiFilters.clear()
+    //   		abiFilters "armeabi-v7a"
+ 		// }
+
+  }
+  aaptOptions {
+    additionalParameters "--no-version-vectors"
+  }
+  project.ext {
+      googlePlayServicesVersion = "16.+"
+    }
+    dependencies {
+      def googlePlayServicesVersion = project.googlePlayServicesVersion
+      implementation "com.google.android.gms:play-services-location:$googlePlayServicesVersion"
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.31"
+    }
+}

@@ -1,0 +1,18 @@
+@import "../../../assets/scss/variables";
+
+.loader {
+  z-index: 10;
+  &__item {
+    background: rgba(255,255,255, 0.9);
+    color: $colorPrimary;
+    border-radius: 50;
+    padding: 10;
+  }
+}
+
+.ns-dark {
+  .loader__item {
+    background: rgba(37,37,37, 0.9);
+  }
+}
+

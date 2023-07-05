@@ -1,0 +1,37 @@
+<RadSideDrawer [allowEdgeSwipe]="false" [drawerTransition]="sideDrawerTransition">
+    <GridLayout class="main-menu" rows="*" tkDrawerContent>
+        <ScrollView row="0">
+            <GridLayout class="main-menu__inner" paddingTop="{{menuPaddingTop}}" rows="90,*">
+                <StackLayout class="main-menu__header" row="0" verticalAlignment="top">
+                    <GridLayout (tap)="goToPage({link: 'dashboard', id:null})" accessibilityLabel="Przejdź na start" accessibilityRole="button"
+                                accessibilityTraits="button"
+                                accessible="true" class="header" columns="auto,*"
+                                horizontalAlignment="center">
+                        <StackLayout col="0" verticalAlignment="center">
+                            <Image class="header__img" src="~/images/logo.png"></Image>
+                        </StackLayout>
+                        <StackLayout col="1" verticalAlignment="center">
+                            <Label class="header__name" text="Otwock Alert Online" textWrap="true"></Label>
+                        </StackLayout>
+                    </GridLayout>
+                </StackLayout>
+                <StackLayout class="main-menu__content" row="1" verticalAlignment="top">
+                    <StackLayout (tap)="goToPage(menu)" *ngFor="let menu of menuData" [ngClass]="{'active': menu.id === activeMenuItem }" class="main-menu__item">
+                        <GridLayout accessibilityLabel="{{menu.name}}" accessibilityRole="button" accessibilityTraits="button" accessible="true" class="content" columns="39,*">
+                            <SVGImage *ngIf="menu.id === activeMenuItem" class="content__img" col="0" height="24"
+                                      src="{{iconService.getBaseIcon(menu.icon,'#000')}}" width="24"></SVGImage>
+                            <SVGImage *ngIf="menu.id !== activeMenuItem" class="content__img" col="0" height="24"
+                                      src="{{iconService.getBaseIcon(menu.icon,'#fff')}}" width="24"></SVGImage>
+                            <Label class="main-menu__name" col="1" text="{{menu.name}}" textWrap="true"
+                                   verticalAlignment="center"></Label>
+                        </GridLayout>
+                    </StackLayout>
+                </StackLayout>
+            </GridLayout>
+        </ScrollView>
+    </GridLayout>
+    <GridLayout tkMainContent>
+        <app-loader></app-loader>
+        <page-router-outlet actionBarVisibility="never"></page-router-outlet>
+    </GridLayout>
+</RadSideDrawer>
